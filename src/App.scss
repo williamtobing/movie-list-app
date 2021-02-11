@@ -1,0 +1,8 @@
+h1 {
+  color: blue;
+  transition-duration: 1s;
+
+  &:hover {
+    color: red;
+  }
+}
