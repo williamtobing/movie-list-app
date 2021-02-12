@@ -1,9 +1,13 @@
+import Header from "./components/Header";
+import Body from "./components/Body";
+
 import "./App.scss";
 
 function App() {
   return (
     <>
-      <h1>movie-list-app</h1>
+      <Header />
+      <Body />
     </>
   );
 }
