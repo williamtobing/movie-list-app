@@ -89,7 +89,6 @@ h1.no-movie {
     .movie-info {
       color: #eee;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       padding: 0.5rem 1rem 1rem;
       letter-spacing: 0.5px;
@@ -102,11 +101,12 @@ h1.no-movie {
 
       span {
         background-color: var(--primary-color);
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem;
         border-radius: 3px;
         font-weight: bold;
         font-size: 0.7rem;
         width: 15%;
+        height: 100%;
         text-align: center;
       }
 
