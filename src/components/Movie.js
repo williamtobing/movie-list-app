@@ -8,9 +8,9 @@ const Movie = ({ movie }) => {
         <h3>{movie.title}</h3>
         <span
           className={
-            movie.vote_count <= 4
+            movie.vote_average < 5
               ? "red"
-              : movie.vote_count >= 8
+              : movie.vote_average >= 8
               ? "green"
               : "orange"
           }
