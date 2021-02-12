@@ -7,6 +7,7 @@ import "./App.scss";
 
 function App() {
   const [movie, setMovie] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const getMovie = async () => {
@@ -20,10 +21,18 @@ function App() {
     getMovie();
   }, []);
 
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredTitle = movie.filter((movieDetail) =>
+    movieDetail.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <>
-      <Header />
-      <Body movie={movie} />
+      <Header handleChange={handleChange} />
+      <Body movie={filteredTitle} />
     </>
   );
 }

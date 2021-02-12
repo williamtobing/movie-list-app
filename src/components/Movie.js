@@ -1,10 +1,22 @@
+import { AiFillLike } from "react-icons/ai";
+
 const Movie = ({ movie }) => {
   return (
     <div className="movie">
       <img src={movie.image} alt="" />
       <div className="movie-info">
         <h3>{movie.title}</h3>
-        <span className="orange">Like: {movie.like}</span>
+        <span
+          className={
+            movie.like <= 20000
+              ? "red"
+              : movie.like >= 80000
+              ? "green"
+              : "orange"
+          }
+        >
+          <AiFillLike /> {movie.like}
+        </span>
       </div>
       <div className="overview">
         <h3>Overview</h3>
