@@ -31,6 +31,7 @@ header {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   color: #fff;
+  transition-duration: 0.3s;
 
   &::placeholder {
     color: var(--primary-font);
@@ -69,6 +70,7 @@ header {
 
       h3 {
         margin-top: 0;
+        font-size: 0.9rem;
       }
 
       span {
@@ -76,6 +78,7 @@ header {
         padding: 0.25rem 0.5rem;
         border-radius: 3px;
         font-weight: bold;
+        font-size: 0.9rem;
       }
 
       span.green {
@@ -103,6 +106,11 @@ header {
   max-height: 100%;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+  font-size: 0.8rem;
+
+  h4 {
+    font-size: 0.6rem;
+  }
 }
 
 .movie:hover .overview {

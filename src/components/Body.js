@@ -1,9 +1,9 @@
 import MovieList from "./MovieList";
 
-const Body = () => {
+const Body = ({ movie }) => {
   return (
     <div>
-      <MovieList />
+      <MovieList movie={movie} />
     </div>
   );
 };

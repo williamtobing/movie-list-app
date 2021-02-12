@@ -1,19 +1,11 @@
 import Movie from "./Movie";
 
-const MovieList = () => {
+const MovieList = ({ movie }) => {
   return (
     <div className="movie-list">
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      {movie.map((movieDetail) => {
+        return <Movie movie={movieDetail} />;
+      })}
     </div>
   );
 };
