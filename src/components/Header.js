@@ -1,14 +1,15 @@
 const Header = ({ handleChange }) => {
   return (
     <header>
-      <form>
-        <input
-          type="text"
-          className="search"
-          placeholder="Search"
-          onChange={handleChange}
-        />
-      </form>
+      <h1>
+        Nonton<span>Film</span>
+      </h1>
+      <input
+        type="search"
+        className="search"
+        placeholder="Search"
+        onChange={handleChange}
+      />
     </header>
   );
 };

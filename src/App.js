@@ -12,10 +12,10 @@ function App() {
   useEffect(() => {
     const getMovie = async () => {
       const res = await fetch(
-        "https://5f50ca542b5a260016e8bfb0.mockapi.io/api/v1/movies"
+        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=2"
       );
       const data = await res.json();
-      setMovie(data);
+      setMovie(data.results);
     };
 
     getMovie();

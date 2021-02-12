@@ -1,32 +1,27 @@
-import { AiFillLike } from "react-icons/ai";
-
 const Movie = ({ movie }) => {
+  const posterLink = "https://image.tmdb.org/t/p/w1280";
+
   return (
     <div className="movie">
-      <img src={movie.image} alt="Movie Image" />
+      <img src={posterLink + movie.poster_path} alt="Poster" />
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <span
           className={
-            movie.like <= 20000
+            movie.vote_count <= 4
               ? "red"
-              : movie.like >= 80000
+              : movie.vote_count >= 8
               ? "green"
               : "orange"
           }
         >
-          <AiFillLike /> {movie.like}
+          {movie.vote_average}
         </span>
       </div>
       <div className="overview">
         <h3>{movie.title}</h3>
-        <h4>{movie.showTime}</h4>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-          consequatur vitae tenetur reprehenderit error architecto
-          exercitationem? Possimus voluptate expedita, voluptatem sed et qui
-          unde ad! Aperiam magnam at fugit dignissimos?
-        </p>
+        <h4>Release Date: {movie.release_date}</h4>
+        <p>{movie.overview}</p>
       </div>
     </div>
   );
