@@ -3,7 +3,7 @@ import { AiFillLike } from "react-icons/ai";
 const Movie = ({ movie }) => {
   return (
     <div className="movie">
-      <img src="" alt="" />
+      <img src={movie.image} alt="Movie Image" />
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <span
