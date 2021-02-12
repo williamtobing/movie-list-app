@@ -1,9 +1,10 @@
 import { AiFillLike } from "react-icons/ai";
+import AltImg from "../assets/movie.jpg";
 
 const Movie = ({ movie }) => {
   return (
     <div className="movie">
-      <img src={movie.image} alt="" />
+      <img src={movie.image} alt={AltImg} />
       <div className="movie-info">
         <h3>{movie.title}</h3>
         <span
