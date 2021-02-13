@@ -34,18 +34,16 @@ function App() {
     getMovie();
   }, []);
 
-  const filteredYear = movie.filter((movieDetail) =>
-    movieDetail.release_date.includes(entederYear)
-  );
-
-  const filteredTitle = movie.filter((movieDetail) =>
-    movieDetail.title.toLowerCase().includes(enteredSearch.toLowerCase())
+  const filteredTitle = movie.filter(
+    (movieDetail) =>
+      movieDetail.title.toLowerCase().includes(enteredSearch.toLowerCase()) &&
+      movieDetail.release_date.includes(entederYear)
   );
 
   return (
     <>
       <Header />
-      <Body movie={filteredTitle} year={yearList} filteredYear={filteredYear} />
+      <Body movie={filteredTitle} year={yearList} />
     </>
   );
 }

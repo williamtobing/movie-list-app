@@ -1,6 +1,6 @@
 import Movie from "./Movie";
 
-const MovieList = ({ movie, filteredYear }) => {
+const MovieList = ({ movie }) => {
   return (
     <div className="movie-list">
       {movie.map((movieDetail) => {
