@@ -1,4 +1,4 @@
-const isLoadingReducer = (state = "false", action) => {
+const isLoadingReducer = (state = true, action) => {
   switch (action.type) {
     case "SET_LOADING_TRUE":
       return true;

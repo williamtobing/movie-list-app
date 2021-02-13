@@ -7,7 +7,7 @@ import isLoadingReducer from "./isLoading";
 const allReducers = combineReducers({
   search: searchReducer,
   year: yearReducer,
-  isLoadiing: isLoadingReducer,
+  isLoading: isLoadingReducer,
 });
 
 export default allReducers;
