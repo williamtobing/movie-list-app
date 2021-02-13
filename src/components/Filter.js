@@ -13,6 +13,7 @@ const Filter = ({ year }) => {
           </p>
         );
       })}
+      <p onClick={() => dispatch(inputYear(""))}>ALL</p>
     </div>
   );
 };

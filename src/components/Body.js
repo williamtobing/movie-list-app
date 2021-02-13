@@ -6,8 +6,6 @@ import Filter from "./Filter";
 const Body = ({ movie, year }) => {
   const isLoading = useSelector((state) => state.isLoading);
 
-  console.log(isLoading);
-
   return (
     <>
       <Filter year={year} />
