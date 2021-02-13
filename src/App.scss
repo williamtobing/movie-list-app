@@ -73,13 +73,13 @@ h1.no-movie {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-
+  width: 99.5%;
   p {
     color: var(--primary-font);
     background: var(--secondary-color);
     margin: 0.5rem 0.5rem 0 0.5rem;
     padding: 0.5rem;
-    width: 4rem;
+    width: 3.5rem;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
