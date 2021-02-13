@@ -68,8 +68,25 @@ h1.no-movie {
   font-size: 2em;
 }
 
-.movie-list {
+.filter {
   padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  p {
+    color: var(--primary-font);
+    background: var(--secondary-color);
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.5rem;
+    width: 4rem;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+.movie-list {
   display: flex;
   flex-wrap: wrap;
 
@@ -160,6 +177,10 @@ h1.no-movie {
       text-align: center;
       margin: 0;
     }
+  }
+
+  .filter {
+    justify-content: center;
   }
 
   .movie-list {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -6,8 +7,20 @@ import Body from "./components/Body";
 import "./App.scss";
 
 function App() {
+  const yearList = [
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+  ];
+
   const [movie, setMovie] = useState([]);
-  const [search, setSearch] = useState("");
+  const enteredSearch = useSelector((state) => state.search);
+  const entederYear = useSelector((state) => state.year);
 
   useEffect(() => {
     const getMovie = async () => {
@@ -21,18 +34,18 @@ function App() {
     getMovie();
   }, []);
 
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
+  const filteredYear = movie.filter((movieDetail) =>
+    movieDetail.release_date.includes(entederYear)
+  );
 
   const filteredTitle = movie.filter((movieDetail) =>
-    movieDetail.title.toLowerCase().includes(search.toLowerCase())
+    movieDetail.title.toLowerCase().includes(enteredSearch.toLowerCase())
   );
 
   return (
     <>
-      <Header handleChange={handleChange} />
-      <Body movie={filteredTitle} />
+      <Header />
+      <Body movie={filteredTitle} year={yearList} filteredYear={filteredYear} />
     </>
   );
 }

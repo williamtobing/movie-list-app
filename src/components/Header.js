@@ -1,4 +1,9 @@
-const Header = ({ handleChange }) => {
+import { useDispatch } from "react-redux";
+import { inputSearch } from "../actions";
+
+const Header = () => {
+  const dispatch = useDispatch();
+
   return (
     <header>
       <h1>
@@ -8,7 +13,7 @@ const Header = ({ handleChange }) => {
         type="search"
         className="search"
         placeholder="Search"
-        onChange={handleChange}
+        onChange={(e) => dispatch(inputSearch(e.target.value))}
       />
     </header>
   );
