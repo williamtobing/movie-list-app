@@ -11,3 +11,15 @@ export const inputYear = (arg) => {
     payload: arg,
   };
 };
+
+export const isLoadMovie = () => {
+  return {
+    type: "SET_LOADING_TRUE",
+  };
+};
+
+export const isLoadedMovie = () => {
+  return {
+    type: "SET_LOADING_FALSE",
+  };
+};
